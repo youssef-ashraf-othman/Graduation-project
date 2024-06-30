@@ -12,8 +12,6 @@ A comprehensive system designed to enhance patient care and improve communicatio
 - [Setup and Installation](#setup-and-installation)
 - [Usage](#usage)
 - [Future Improvements](#future-improvements)
-- [Contributing](#contributing)
-- [License](#license)
 - [Acknowledgements](#acknowledgements)
 
 ## Introduction
