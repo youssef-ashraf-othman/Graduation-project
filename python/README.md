@@ -6,12 +6,10 @@ A Python GUI application for the Nurse Calling System, designed to manage and di
 - [Introduction](#introduction)
 - [Features](#features)
 - [GUI Layout](#gui-layout)
-- [Setup and Installation](#setup-and-installation)
+
 - [Usage](#usage)
 - [Future Improvements](#future-improvements)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+
 
 ## Introduction
 The Python application provides a graphical user interface (GUI) for nurses to monitor patient calls from four rooms. Each room is represented by four buttons that change color based on the call type and display time information.
