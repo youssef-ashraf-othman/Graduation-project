@@ -1,42 +1,41 @@
-# Nurse Calling System - Python Application
+# Nurse Calling System - ESP32 Code
 
-A Python GUI application for the Nurse Calling System, designed to manage and display patient calls for four rooms. Each room has four buttons that change color based on the type of call and display time information.
+This code is part of the Nurse Calling System project. It runs on ESP32 microcontrollers and handles the communication between patient call buttons and the nurse station. The ESP32s are connected to a router via Ethernet and use MQTT for communication.
 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
-- [GUI Layout](#gui-layout)
-- [Setup and Installation](#setup-and-installation)
+- [Hardware Components](#hardware-components)
+- [Dependencies](#dependencies)
 - [Usage](#usage)
 - [Future Improvements](#future-improvements)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
 
 ## Introduction
-The Python application provides a graphical user interface (GUI) for nurses to monitor patient calls from four rooms. Each room is represented by four buttons that change color based on the call type and display time information.
+The ESP32 code is designed to interface with patient call buttons and send call status to a central server using MQTT. It handles normal and emergency calls, indicated by different button presses, and updates the nurse station via MQTT messages.
 
 ## Features
-- **Room-Based Buttons**: Four buttons per room, initially black.
-- **Color Indicators**: Buttons turn red for emergency calls and yellow for normal calls.
-- **Time Information**: Display time of the call for prioritization.
+- **Button Press Detection**: Detects normal and emergency calls from patient buttons.
+- **LED Indication**: Changes LED states based on call status.
+- **MQTT Communication**: Sends call status to the server and receives reset commands.
+- **Ethernet Connectivity**: Connects to the network via Ethernet for reliable communication.
 
-## GUI Layout
-The application interface consists of:
-- **Four Rooms**: Each room has four buttons.
-- **Button Colors**: 
-  - **Black**: No call.
-  - **Red**: Emergency call.
-  - **Yellow**: Normal call.
-- **Time Display**: Each button shows the time the call was made for prioritization.
+## Hardware Components
+- **ESP32 Microcontroller**
+- **Ethernet Module**: For network connectivity
+- **Buttons**: Two per bed (normal call and emergency call)
+- **LEDs**: For visual indication of call status (green for idle, red for active call)
+
+## Dependencies
+- **SPI.h**: SPI communication library
+- **Ethernet2.h**: Ethernet library for network connectivity
+- **PubSubClient.h**: MQTT client library
+
 ## Usage
-Start the Application: Run the application using the command python app.py.
-Monitor Calls: Observe the buttons on the GUI:
-Black: No call.
-Red: Emergency call.
-Yellow: Normal call.
+Upload the code: Use the Arduino IDE or PlatformIO to upload the code to the ESP32.
+Connect the hardware: Ensure all buttons and LEDs are connected to the correct pins.
+Monitor the system: Observe the LED states and MQTT messages for call status.
 
-##Future Improvements
-Enhanced GUI Design: Improve the visual design and usability of the interface.
-Logging System: Implement a logging feature to track call history and response times.
-Extended Room Support: Scale the application to support more rooms and buttons
+## Future Improvements
+Debouncing: Implement hardware debouncing for button presses.
+Security: Add secure MQTT communication (e.g., using TLS).
+Scalability: Expand the system to support more beds and rooms.
