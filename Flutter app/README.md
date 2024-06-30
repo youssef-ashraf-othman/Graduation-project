@@ -29,12 +29,12 @@ The app utilizes push notifications to alert nurses of new patient calls. Notifi
 ## Database Integration
 The app uses the `sqflite` package for local database management. User credentials and session data are securely stored and retrieved from the database.
 
-##Usage
+## Usage
 Signup: Open the app and navigate to the Signup screen to create a new account.
 Login: Use the Login screen to access your account.
 Dashboard: Monitor and respond to patient calls from the Dashboard screen. Calls will appear as containers with timing to achieve priority displayed. Responding to a call will remove the container and send an indication back to the patient.
 
-##Future Improvements
+## Future Improvements
 Enhanced Priority Management: Implement algorithms for better prioritization of patient calls.
 Localization: Add support for multiple languages to accommodate diverse healthcare settings.
 Performance Optimization: Fine-tune app performance for smoother user experience.
